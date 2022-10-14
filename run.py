@@ -14,7 +14,7 @@ if __name__ == "__main__":
     args = get_args()
     wav_file = args.file
     if os.path.exists(wav_file): 
-        speech2text = Speech2Text(model_dir='train_asr_ksc_v1')
+        speech2text = Speech2Text(model_dir='train_asr_ksc_v1', use_quantized=True)
         y, sr = librosa.load(wav_file, sr=16000)
         text = speech2text(y)[0][0]
         print(text)
