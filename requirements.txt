@@ -1,4 +1,4 @@
-git+https://github.com/espnet/espnet_onnx.git
+git+https://github.com/mussakhojayeva/espnet_onnx.git
 librosa==0.9.1
 onnx==1.11.0
 six==1.16.0
