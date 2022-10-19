@@ -4,8 +4,8 @@ services:
     volumes:
       - '${PROJECT_PATH}:${PROJECT_PATH}'
       - '${STORAGE_FOLDER}:${STORAGE_FOLDER}'
-      - '${STORAGE_FOLDER}/train_asr_ksc_v1:/espnet2onnx_demo/train_asr_ksc_v1'
+#      - '${STORAGE_FOLDER}/train_asr_ksc_v1:/espnet2onnx_demo/train_asr_ksc_v1'
     container_name: '${PROJECT_NAME}'
-    command: uvicorn app.main:app --reload --host 0.0.0.0
+    command: uvicorn app.server:app --reload --host 0.0.0.0
     ports:
       - "8369:8000"

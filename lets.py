@@ -78,7 +78,7 @@ def run(ctx: typer.Context, command: str = typer.Option('bash', '--command', '--
         os.system('xhost +')
         cmd_parts.append('--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"')
         cmd_parts.append('--env="DISPLAY"')
-    cmd_parts.append(f'--volume="{dm[EnvKeys.STORAGE_FOLDER]}/train_asr_ksc_v1:/espnet2onnx_demo/train_asr_ksc_v1"')
+    # cmd_parts.append(f'--volume="{dm[EnvKeys.STORAGE_FOLDER]}/train_asr_ksc_v1:/espnet2onnx_demo/train_asr_ksc_v1"')
     cmd_parts.extend(ctx.args)
     cmd_parts.append(f"{dm['APP_IMAGE_NAME']} {command}")
     cmd = " ".join(cmd_parts)
