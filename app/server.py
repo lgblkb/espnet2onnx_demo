@@ -22,7 +22,7 @@ class Response(BaseModel):
 
 response_example = {
     200: {
-        "description": "Return list of (word, label) pairs.",
+        "description": "Speech to Text conversion",
         "content": {
             "application/json": {
                 "examples": {
